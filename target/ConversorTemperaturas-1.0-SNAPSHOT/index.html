@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperaturas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <style>
+
+            /*Fondo de toda la página en sí*/
+            body {
+                background-color: #0f172a;/*AZUL MARINO OSCURO*/
+                font-family: Arial;
+            }
+            
+            /*Tarjeta base*/
+            .TarjetaBase
+            {
+                background-color: #13293d;/*AZUL MARINO*/
+                width: 450px;
+                margin: auto;
+                margin-top: 80px;
+                padding: 25px;
+                border: 4px solid #5eead4;
+                color: white;
+                text-align: center; /*ALINEA AL CENTRO DE LA PÁGINA*/
+            }
+            
+            /*Título / Nombre*/
+            h1 
+            {
+                color: #5eead4; /*COLOR MENTA*/
+            }
+            
+            /*Agregamos un párrafo para una descripción*/
+            p
+            {
+                color: #d1fae5;/*MENTA CLARO*/
+            }
+            
+            /*Tabla/cuadro*/
+            table
+            {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            
+            /*Bordes y espacio*/
+            th, td 
+            {
+                border: 2px solid #5eead4;/* *SÓLIDO* MENTA*/
+                padding: 10px;
+                text-align: center;
+            }
+
+
+            /*Encabezados*/
+            th
+            {
+                background-color: #5eead4; /*MENTA*/
+                color: #0f172a;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="TarjetaBase">
+            <!-- Título tarjeta -->
+            <h1>Conversor Temperaturas</h1>
+            <form action="TemperaturaServlet" method="post">
+                <p></p>                     
+            Temperatura: <input name="Temperatura" type="number" step="any">   
+            <select name="TempOption">
+                <option value="Celsius → Fahrenheit">Celsius → Fahrenheit</option>
+                <option value="Fahrenheit → Celsius">Fahrenheit → Celsius</option>
+                <option value="Celsius → Kelvin">Celsius → Kelvin</option>
+                <option value="Kelvin → Celsius">Kelvin → Celsius</option>
+            </select>
+            <p></p>
+            <button type="submit">Convertir</button>
+        </form>  
+
+        </div>
+      
+    </body>
+</html>
